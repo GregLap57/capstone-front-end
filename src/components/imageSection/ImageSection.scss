@@ -1,0 +1,63 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/resets" as *;
+
+.image-section {
+  display: none;
+
+  @include tablet {
+    display: flex;
+    gap: 4vmin;
+    padding: 3rem 2rem 1rem;
+    justify-content: space-between;
+    border-top: 1px solid gold;
+  }
+}
+
+.images {
+  width: 100%;
+
+  &__image {
+    width: 100%;
+    height: 44vmin;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 1rem;
+  }
+}
+
+.gallery-link {
+  margin-bottom: 7rem;
+}
+
+.gallery-button {
+  background-color: rgb(72, 163, 244);
+  margin: 1rem 0;
+  border: 2px solid white;
+  position: absolute;
+  right: 2rem;
+  border-radius: 1rem;
+  height: 3.5rem;
+  padding: 0 1rem;
+  cursor: pointer;
+  transform: scale(1.25);
+  transition: 100ms;
+
+  @include tablet {
+    transform: scale(1.35);
+    right: 3.2rem;
+  }
+
+  @include desktop {
+    transform: scale(1.5);
+    right: 4rem;
+  }
+
+  &:active {
+    transform: scale(0.96);
+  }
+
+  &--order {
+    color: white;
+  }
+}

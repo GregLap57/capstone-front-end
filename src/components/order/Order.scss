@@ -1,0 +1,60 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/resets" as *;
+
+.order {
+  margin: 4rem 2rem;
+
+  &__title {
+    font-size: 2.5rem;
+    color: gold;
+    text-decoration: wavy;
+  }
+
+  &__band {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2rem;
+    background-color: white;
+    border-radius: 1rem 1rem 0 0;
+
+    &--heading {
+      color: rgb(72, 163, 244);
+      font-size: 1.5rem;
+      height: 1rem;
+    }
+  }
+
+  &__card {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2rem 2rem;
+    background-color: black;
+    position: relative;
+  }
+
+  &__type {
+    color: gold;
+    font-size: 1.5rem;
+  }
+
+  &__info {
+    display: flex;
+  }
+
+  &__qty {
+    font-size: 1rem;
+    color: gold;
+    margin-left: 0.5rem;
+  }
+
+  &__dish {
+    color: white;
+    font-size: 1.35rem;
+  }
+
+  &__button {
+    background-color: black;
+    border: 1px solid black;
+  }
+}

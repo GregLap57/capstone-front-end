@@ -1,0 +1,116 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/resets" as *;
+
+.hero {
+  @include tablet {
+    display: flex;
+    margin: 2rem;
+  }
+
+  &__div {
+    &--left {
+      @include tablet {
+        width: 50%;
+      }
+
+      @include desktop {
+        width: 40%;
+      }
+    }
+
+    &--right {
+      @include tablet {
+        width: 50%;
+      }
+
+      @include desktop {
+        width: 60%;
+      }
+    }
+  }
+
+  &__quote {
+    margin: 2rem;
+    text-align: center;
+    font-size: 2rem;
+
+    @include tablet {
+      font-size: 3rem;
+      margin-bottom: 3rem;
+      color: gold;
+      line-height: 1.4;
+      text-align: left;
+    }
+
+    @include desktop {
+      font-size: 3.5rem;
+    }
+  }
+
+  &__description {
+    font-size: 1.4rem;
+    margin: 0 2rem 2rem;
+
+    @include tablet {
+      font-size: 1.8rem;
+      line-height: 2.5rem;
+    }
+
+    @include desktop {
+      font-size: 2rem;
+      line-height: 1.5;
+    }
+  }
+
+  &__button {
+    background-color: white;
+    border: white;
+    border-radius: 1.7rem;
+    margin: 0 2rem 3rem;
+    height: 3rem;
+    width: 8rem;
+    box-shadow: 0 0 5px gold, 0 0 25px gold;
+    cursor: pointer;
+    transform: scale(1);
+    transition: 1000ms;
+
+    @include tablet {
+      transform: scale(1.5);
+      margin-top: 2rem;
+      margin-left: 4rem;
+    }
+
+    @include desktop {
+      transform: scale(2);
+      margin-top: 3rem;
+      margin-left: 6rem;
+    }
+
+    &:hover {
+      transform: scale(1.075);
+
+      @include tablet {
+        transform: scale(1.6);
+      }
+
+      @include desktop {
+        transform: scale(2.1);
+      }
+    }
+
+    &--menu {
+      color: black;
+    }
+  }
+
+  &__image {
+    &--featured {
+      border-radius: 1rem;
+
+      @include tablet {
+        margin-top: 2rem;
+      }
+    }
+  }
+}

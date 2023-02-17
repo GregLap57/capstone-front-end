@@ -1,0 +1,69 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/resets" as *;
+
+.menu {
+  &__list {
+    margin: 1rem 2rem;
+    padding-top: 1rem;
+    background-color: black;
+    border-radius: 0.5rem;
+
+    &--title {
+      color: rgb(72, 163, 244);
+      font-style: oblique;
+      padding-top: 3rem;
+      padding: 0 1rem;
+    }
+  }
+
+  &__item {
+    background-color: black;
+    padding: 0 1.5rem 1rem;
+    margin: 1.5rem 0;
+    border-bottom: 0.01px solid gold;
+    border-radius: 0.5rem;
+
+    &--name {
+      color: gold;
+      font-style: italic;
+      padding: 1rem 0;
+      margin: 0;
+    }
+
+    &--price {
+      color: gold;
+    }
+
+    &--description {
+      line-height: 1.6;
+      text-align: justify;
+      color: white;
+    }
+  }
+
+  &__button {
+    background-color: white;
+    border: white;
+    margin: 0.75rem 0;
+    border-radius: 1rem;
+    height: 3.5rem;
+    width: 15%;
+    box-shadow: 0 0 5px gold, 0 0 25px gold;
+    cursor: pointer;
+    transform: scale(0.98);
+    transition: 275ms;
+
+    &:hover {
+      transform: scale(1.02);
+    }
+
+    &:active {
+      transform: scale(0.96);
+    }
+
+    &--text {
+      color: black;
+    }
+  }
+}

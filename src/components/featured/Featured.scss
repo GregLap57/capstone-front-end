@@ -1,0 +1,75 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/resets" as *;
+
+.featured {
+  @include tablet {
+    display: flex;
+    margin-bottom: 3rem;
+  }
+
+  &__heading {
+    @include tablet {
+      font-size: 2.8rem;
+      font-style: italic;
+      color: gold;
+      border-bottom: 1px solid gold;
+      margin: 2rem;
+    }
+  }
+
+  &__menu {
+    margin: 2rem;
+
+    @include tablet {
+      margin-right: 2rem;
+    }
+
+    &--image {
+      border-radius: 1rem;
+
+      @include tablet {
+        border-radius: 2rem;
+        margin: 2rem;
+        width: 50%;
+      }
+
+      @include desktop {
+        width: 60%;
+      }
+    }
+
+    &--gold {
+      color: gold;
+    }
+
+    &--ticker {
+      @include tablet {
+        font-size: 3rem;
+      }
+    }
+  }
+
+  &__dish {
+    @include tablet {
+      margin-top: 3rem;
+    }
+
+    &--heading {
+      @include tablet {
+        font-size: 2.5rem;
+        font-style: italic;
+        font-weight: 700;
+        color: gold;
+      }
+    }
+
+    &--description {
+      @include tablet {
+        font-size: 2rem;
+        font-weight: 600;
+        line-height: 1.5;
+      }
+    }
+  }
+}
